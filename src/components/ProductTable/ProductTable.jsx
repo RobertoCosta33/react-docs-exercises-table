@@ -1,12 +1,11 @@
 import { ProductCategoryRow } from "../ProductCategoryRow";
 import { ProductRow } from "../ProductRow";
-import { PRODUCTS } from "../../api";
 
-export const ProductTable = () => {
+export const ProductTable = ({products}) => {
   const rows = [];
   let lastCategory = null;
 
-  PRODUCTS.forEach((product) => {
+  products.forEach((product) => {
     if (product.category !== lastCategory) {
       rows.push(
         <ProductCategoryRow

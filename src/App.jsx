@@ -1,10 +1,11 @@
 import "./App.css";
 import { FilterableProductTable } from "./components";
+import { PRODUCTS } from "./api";
 
 function App() {
   return (
     <div className="App">
-      <FilterableProductTable  />
+      <FilterableProductTable products={PRODUCTS}/>
     </div>
   );
 }
